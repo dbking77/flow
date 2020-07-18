@@ -1,0 +1,7 @@
+<map id="flow::follower::AnyBefore&lt; DispatchT, LockPolicyT, ContainerT &gt;" name="flow::follower::AnyBefore&lt; DispatchT, LockPolicyT, ContainerT &gt;">
+<area shape="rect" id="node2" href="$classflow_1_1_follower.html" title="flow::Follower\&lt; AnyBefore\l\&lt; DispatchT, LockPolicyT,\l ContainerT \&gt; \&gt;" alt="" coords="957,60,1136,116"/>
+<area shape="rect" id="node3" href="$classflow_1_1_captor.html" title="flow::Captor\&lt; Follower\l\&lt; AnyBefore\&lt; DispatchT,\l LockPolicyT, ContainerT\l \&gt; \&gt;, CaptorTraits\&lt; AnyBefore\l\&lt; DispatchT, LockPolicyT, ContainerT\l \&gt; \&gt;::LockPolicyType \&gt;" alt="" coords="661,38,908,138"/>
+<area shape="rect" id="node4" href="$classflow_1_1_captor_interface.html" title="flow::CaptorInterface\l\&lt; Captor\&lt; Follower\&lt; AnyBefore\l\&lt; DispatchT, LockPolicyT,\l ContainerT \&gt; \&gt;, CaptorTraits\l\&lt; AnyBefore\&lt; DispatchT, LockPolicyT,\l ContainerT \&gt; \&gt;::LockPolicyType \&gt; \&gt;" alt="" coords="361,38,612,138"/>
+<area shape="rect" id="node5" href="$classflow_1_1_dispatch_queue.html" title="flow::DispatchQueue\l\&lt; DispatchType, DispatchContainer\lType \&gt;" alt="" coords="13,5,244,61"/>
+<area shape="rect" id="node6" href="$structflow_1_1_captor_traits.html" title="flow::CaptorTraits\l\&lt; Captor\&lt; Follower\&lt;\l AnyBefore\&lt; DispatchT,\l LockPolicyT, ContainerT\l \&gt; \&gt;, CaptorTraits\&lt; AnyBefore\l\&lt; DispatchT, LockPolicyT, ContainerT\l \&gt; \&gt;::LockPolicyType \&gt; \&gt;" alt="" coords="5,85,252,200"/>
+</map>

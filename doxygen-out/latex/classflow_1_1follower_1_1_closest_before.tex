@@ -1,0 +1,111 @@
+\hypertarget{classflow_1_1follower_1_1_closest_before}{}\section{flow\+:\+:follower\+:\+:Closest\+Before$<$ DispatchT, Lock\+PolicyT, ContainerT $>$ Class Template Reference}
+\label{classflow_1_1follower_1_1_closest_before}\index{flow\+::follower\+::\+Closest\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$@{flow\+::follower\+::\+Closest\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$}}
+
+
+Captures one element before the capture range lower bound, minus a delay period, within an expected period.  
+
+
+
+
+{\ttfamily \#include $<$closest\+\_\+before.\+h$>$}
+
+
+
+Inheritance diagram for flow\+:\+:follower\+:\+:Closest\+Before$<$ DispatchT, Lock\+PolicyT, ContainerT $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1follower_1_1_closest_before__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for flow\+:\+:follower\+:\+:Closest\+Before$<$ DispatchT, Lock\+PolicyT, ContainerT $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classflow_1_1follower_1_1_closest_before__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classflow_1_1follower_1_1_closest_before_aa022f9ad90083d6ea754d5f800bfcd36}\label{classflow_1_1follower_1_1_closest_before_aa022f9ad90083d6ea754d5f800bfcd36}} 
+using \hyperlink{classflow_1_1follower_1_1_closest_before_aa022f9ad90083d6ea754d5f800bfcd36}{stamp\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ \hyperlink{classflow_1_1follower_1_1_closest_before}{Closest\+Before} $>$\+::\hyperlink{classflow_1_1follower_1_1_closest_before_aa022f9ad90083d6ea754d5f800bfcd36}{stamp\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Data stamp type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}\label{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}} 
+using \hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type} = typename \hyperlink{structflow_1_1_captor_traits}{Captor\+Traits}$<$ \hyperlink{classflow_1_1follower_1_1_closest_before}{Closest\+Before} $>$\+::\hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Data stamp duration type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classflow_1_1follower_1_1_closest_before_a556251ee275527f2ef62330c2179570e}{Closest\+Before} (const \hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type} \&period, const \hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type} \&delay)
+\begin{DoxyCompactList}\small\item\em Setup constructor. \end{DoxyCompactList}\item 
+\hyperlink{classflow_1_1follower_1_1_closest_before_aef985d6cf71c26077fa58859443d5326}{Closest\+Before} (const \hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type} \&period, const \hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type} \&delay, const ContainerT \&container)
+\begin{DoxyCompactList}\small\item\em Setup constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename DispatchT, typename Lock\+PolicyT = No\+Lock, typename ContainerT = Default\+Container$<$\+Dispatch\+T$>$$>$\newline
+class flow\+::follower\+::\+Closest\+Before$<$ Dispatch\+T, Lock\+Policy\+T, Container\+T $>$}
+
+Captures one element before the capture range lower bound, minus a delay period, within an expected period. 
+
+All older elements are removed.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em DispatchT} & data dispatch type \\
+\hline
+{\em Lock\+PolicyT} & a Basic\+Lockable (\href{https://en.cppreference.com/w/cpp/named_req/BasicLockable}{\tt https\+://en.\+cppreference.\+com/w/cpp/named\+\_\+req/\+Basic\+Lockable}) object or \hyperlink{structflow_1_1_no_lock}{No\+Lock} or \hyperlink{structflow_1_1_polling_lock}{Polling\+Lock} \\
+\hline
+{\em ContainerT} & underlying {\ttfamily DispatchT} container type\\
+\hline
+\end{DoxyTemplParams}
+\hyperlink{classflow_1_1follower_1_1_closest_before}{Closest\+Before} will behave non-\/deterministically if actual input period (difference between successive dispatch stamps) does not match the {\ttfamily period} argument specified on construction. For example, if {\ttfamily period} is too large, than multiple inputs could appear before the driving range, causing for different data on two or more iterations where the \char`\"{}latest\char`\"{} data was assumed to have been the same 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classflow_1_1follower_1_1_closest_before_a556251ee275527f2ef62330c2179570e}\label{classflow_1_1follower_1_1_closest_before_a556251ee275527f2ef62330c2179570e}} 
+\index{flow\+::follower\+::\+Closest\+Before@{flow\+::follower\+::\+Closest\+Before}!Closest\+Before@{Closest\+Before}}
+\index{Closest\+Before@{Closest\+Before}!flow\+::follower\+::\+Closest\+Before@{flow\+::follower\+::\+Closest\+Before}}
+\subsubsection{\texorpdfstring{Closest\+Before()}{ClosestBefore()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename DispatchT , typename Lock\+PolicyT  = No\+Lock, typename ContainerT  = Default\+Container$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1follower_1_1_closest_before}{flow\+::follower\+::\+Closest\+Before}$<$ DispatchT, Lock\+PolicyT, ContainerT $>$\+::\hyperlink{classflow_1_1follower_1_1_closest_before}{Closest\+Before} (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type} \&}]{period,  }\item[{const \hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type} \&}]{delay }\end{DoxyParamCaption})}
+
+
+
+Setup constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em period} & expected period between successive data element \\
+\hline
+{\em delay} & the delay with which to capture \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classflow_1_1follower_1_1_closest_before_aef985d6cf71c26077fa58859443d5326}\label{classflow_1_1follower_1_1_closest_before_aef985d6cf71c26077fa58859443d5326}} 
+\index{flow\+::follower\+::\+Closest\+Before@{flow\+::follower\+::\+Closest\+Before}!Closest\+Before@{Closest\+Before}}
+\index{Closest\+Before@{Closest\+Before}!flow\+::follower\+::\+Closest\+Before@{flow\+::follower\+::\+Closest\+Before}}
+\subsubsection{\texorpdfstring{Closest\+Before()}{ClosestBefore()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename DispatchT , typename Lock\+PolicyT  = No\+Lock, typename ContainerT  = Default\+Container$<$\+Dispatch\+T$>$$>$ \\
+\hyperlink{classflow_1_1follower_1_1_closest_before}{flow\+::follower\+::\+Closest\+Before}$<$ DispatchT, Lock\+PolicyT, ContainerT $>$\+::\hyperlink{classflow_1_1follower_1_1_closest_before}{Closest\+Before} (\begin{DoxyParamCaption}\item[{const \hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type} \&}]{period,  }\item[{const \hyperlink{classflow_1_1follower_1_1_closest_before_aeb5bb0a977487c9e4df80143c6dcb008}{offset\+\_\+type} \&}]{delay,  }\item[{const ContainerT \&}]{container }\end{DoxyParamCaption})}
+
+
+
+Setup constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em period} & expected half-\/period between successive data elements \\
+\hline
+{\em delay} & the delay with which to capture \\
+\hline
+{\em container} & dispatch object container (non-\/default initialization) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+flow/include/follower/\hyperlink{closest__before_8h}{closest\+\_\+before.\+h}\end{DoxyCompactItemize}
